@@ -1,21 +1,54 @@
 # Accredian Enterprise - Landing Page Clone
 
-## 🚀 Overview
-I designed and developed this project as part of the Full Stack Developer Intern assignment for Accredian. It is a full landing page clone of [Accredian Enterprise](https://enterprise.accredian.com/), built to replicate the original website's user interface, responsive section layouts, color palette (`#1d72f3`), and interactive user flows.
+## Overview
+I designed and developed this project as part of the Full Stack Developer Intern assignment for Accredian. It is a full landing page clone of [Accredian Enterprise](https://enterprise.accredian.com/), built to replicate the original website's user interface, responsive section layouts, exact brand color palette (`#1d72f3`), and interactive user flows.
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 - **Framework:** Next.js 15 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **Icons:** Lucide React & Custom Inline SVGs
 - **State Management:** React Hooks (`useState`, `useEffect`)
-- **API Handler:** Next.js Server Route Handler (`/api/leads`)
+- **Backend API:** Next.js Server Route Handler (`/api/leads`)
 
 ---
 
-## ✨ Key Features & Components
+## Project Structure
+
+```text
+Accredian-Enterprise/
+├── public/
+│   ├── accredian/             # Official brand images, partner logos & vector SVGs
+│   └── favicon.ico            # Site favicon
+├── src/
+│   ├── app/
+│   │   ├── api/leads/         # Enquiry form submission route handler
+│   │   ├── globals.css        # Tailwind styling & global styles
+│   │   ├── layout.tsx         # Root layout with site metadata & favicon
+│   │   └── page.tsx           # Main landing page entry point
+│   ├── components/            # Modular UI components
+│   │   ├── Header.tsx         # Sticky navigation with scroll spy
+│   │   ├── Hero.tsx           # Hero section with CTA modal trigger
+│   │   ├── TrackRecordSection.tsx # Stats counters & partner logos
+│   │   ├── AccredianEdgeSection.tsx # Vector diagram section
+│   │   ├── DomainSection.tsx  # Domain grid & course segmentation
+│   │   ├── ProcessSection.tsx # CAT framework & 3-step delivery
+│   │   ├── FAQSection.tsx     # Accordion Q&A with single-open state
+│   │   ├── TestimonialsSection.tsx # Quote slider & review controls
+│   │   ├── Footer.tsx         # Social links & company footer
+│   │   └── LeadModal.tsx      # Modal popup form with delivery options
+│   └── data/
+│       └── enterpriseData.ts  # Structured mock data & interfaces
+├── README.md
+├── package.json
+└── tsconfig.json
+```
+
+---
+
+## Key Features & Components
 
 1. **Sticky Header & Mobile Navigation**
    - Official Accredian logo with active scroll-spy navigation links (`Home`, `Stats`, `Clients`, `Accredian Edge`, `CAT`, `How It Works`, `FAQs`, `Testimonials`).
@@ -53,12 +86,12 @@ I designed and developed this project as part of the Full Stack Developer Intern
 
 ---
 
-## 🤖 AI Usage & Development Note
+## Development Approach & AI Usage
 
-### Core Development (Done Manually):
+### Core Engineering (Done Manually):
 - **Architecture & Layout:** Designed and built the full Next.js App Router project structure, component hierarchy, responsive Tailwind CSS layouts, and color palette (`#1d72f3`).
 - **Interactive State & Logic:** Wrote the state management for modal popups, header scroll spy, testimonial slider, and single-open FAQ accordion behavior.
-- **Asset & Data Integration:** Configured all official brand assets, favicon, social media links, form inputs, and backend API route.
+- **Asset & Data Integration:** Configured all official brand assets, site favicon, company social media links, form inputs, and backend API route.
 - **Optimization:** Tested and optimized the production build (`npm run build`) ensuring zero TypeScript or Turbopack errors.
 
 ### Minor AI Assistance:
@@ -66,7 +99,7 @@ I designed and developed this project as part of the Full Stack Developer Intern
 
 ---
 
-## 🛠️ How to Run Locally
+## How to Run Locally
 
 ```bash
 # 1. Install dependencies
